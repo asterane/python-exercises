@@ -1,0 +1,36 @@
+from random import randint
+import time
+
+right = 0
+no = 1
+
+print("This is a visual addition program.")
+
+ques = eval(input("How many questions would you like? "))
+print("Starting...")
+for i in range(3,0,-1):
+    print(i)
+    time.sleep(1)
+print("Go! \n")
+
+for index in range(int(ques)):
+    x = randint(0,5)
+    y = randint(0,5)
+    
+    print(("%s. %s + %s" % (str(no), str(y), str(x))))
+    print(("* " * y))
+    print("+")
+    print(("* " * x))
+    ans = int(eval(input("Enter your answer: ")))
+    print(("You entered %s" % ans))
+    no += 1
+    if ans == x+y:
+        print("Correct! \n")
+        right += 1
+    if ans != x+y:
+        print("Incorrect.")
+        print(("The correct answer is %s. \n" % str(y+x)))
+        
+print(("You got %s out of %s problems correct." % (str(right), str(ques))))
+percent = float(float(right)/float(ques) * 100)
+print(("That is %.2f percent correct." % float(percent)))

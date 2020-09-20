@@ -1,0 +1,25 @@
+
+import time
+done = False
+
+rawtime = int(input('How many minutes?'))
+def countdown(rawtime):
+    minute = rawtime - 1
+    second = 59
+ 
+    for i in range(rawtime):
+        for j in range(60):
+            time.sleep(1)
+            second = second - 1
+            if second == 0:
+                minute = minute - 1
+                second = 59
+            elif second == 0 and minute == 0:
+                print("Time's Up!")
+                break
+            timer = ("%s:%s" % (minute, second))
+            print(timer)
+    return timer
+
+    
+print(countdown(rawtime))

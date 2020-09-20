@@ -1,0 +1,36 @@
+print "Hello!"
+print "My",
+print "name",
+print "is",
+print "Victor the computer!"
+somebody = raw_input("Please enter your name: ")
+print "Hi ", somebody, " how are you today? Answer good or bad."
+
+answer = raw_input()
+if answer == 'good':
+    print "Oh good! Tell me about your day."
+    response = raw_input()
+    print "I'm glad you had a good day! Is there anything I could do for you?"
+    command = raw_input()
+    print "Sure! Check back in ten years, I'll have done it by then. Is that ok? Answer yes or no."
+    answer2 = raw_input()
+
+    if answer2 == 'yes':
+        print "Ok! Have a good day! Remember to check in in ten years, ok? Bye!"
+
+    if answer2 == 'no':
+        print "Ok, have a good day. Bye!"
+        
+
+
+
+
+
+if answer == 'bad':
+    print "BUMMER! Tell me what happened today."
+    response = raw_input()
+    print "That's sad. Is there anything I can do for you?"
+    command = raw_input()
+    print "Sorry, I am not able to do that... Seeing as I don't have legs. Anything else I can do?"
+    command2 = raw_input()
+    print "Sorry, I can't do that either. Have a good day!"

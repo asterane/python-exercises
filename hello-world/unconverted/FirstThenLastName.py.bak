@@ -1,0 +1,7 @@
+print "Enter your first name"
+FirstName = raw_input()
+print "Enter your last name"
+LastName = raw_input()
+print "Hello",
+print FirstName,
+print LastName

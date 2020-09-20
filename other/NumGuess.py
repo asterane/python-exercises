@@ -1,0 +1,39 @@
+import random
+guesses = 0
+x = 1000
+y = 1
+print('I\'m Vick. Think of a number between 1 and 1000 and I will guess it in 10 guesses.')
+while guesses < 10:
+    guess = random.randint(y, x)
+    print(('I guess %s.' % guess))
+    typ = input('Is my guess high(H), low(L), or correct(C)? ')
+    if typ.lower().startswith('c'):
+        print('I told you I could guess it!')
+        break
+
+    if typ.lower().startswith('h'):
+        if guesses < 10:
+            print('Darn! I\'ll try again.')
+        else:
+            break
+        x = guess - 1
+
+    elif typ.lower().startswith('l'):
+        if guesses < 10:
+            print('Darn! I\'ll try again.')
+        else:
+            break
+        y = guess + 1
+
+    guesses += 1
+
+if guesses == 10:
+    print('Oops! I\'m out of guesses. I\'ll get it next time!!!')
+
+else:
+    pass
+    
+
+    
+    
+    
